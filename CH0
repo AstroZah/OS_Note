@@ -1,13 +1,14 @@
 Batch -> 單次Job到下次Job的程式執行流程
 JOB -> Compile -> Load -> Run -> End
 
-Mainframe : Batch System
+Mainframe : Batch System (Single user & single job)
 Memory Layout : OS + User Program Area
 -> One job at one time
 -> No interaction
 -> CPU is often idle (Because of speed I/O << CPU) 
 
 Mainframe : Multi-Programming System (Disk job pool --[Job sche]-> Memory --[CPU sche]-> CPU)
+(Single user & multi-programming)
 OS tasks : Memory management + CPU scheduling + I/O system
 Memory Layout : OS + Job 1 + Job2 + ...
 -> Overlaps the I/O and computation of jobs (Increasing I/O & CPU using rate)
@@ -15,7 +16,7 @@ Memory Layout : OS + Job 1 + Job2 + ...
   -> I/O is DONE with no CPU intervention
   -> CPU just needs to be notified when I/O is DONE
 
-Mainframe : Time-shared system (Multi-tasking system)
+Mainframe : Time-shared system (Multi-tasking system) (Multi-user & multi prog.)
 OS tasks : Virtual Memory (VRAM) + Files sys / Disk management  + Process synchronization / deadlock
 -> Interactive
   -> CPU switch amog jobs frequently
